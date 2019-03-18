@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+
+            main {
+                display: flex;
+                margin: 14px auto;
+                width: 100%;
+                max-width: 1000px;
+                flex-direction: column;
+                height: 100%;
+            }
+
+            container {
+                display: flex;
+                flex: 1;
+            }
+
+            .block {
+                background-color: pink;
+                border: 1px solid gray;
+            }
+
+            .block1 {
+                flex-grow: 1;
+                margin: 10px;
+                text-align: center;
+            }
+
+            .block2, .block3, .block4, .block5 {
+                margin: 10px;
+                flex-grow: 0.5;
+                text-align: center;
+            }
+
+            @media screen and (max-width: 480px) {
+                container {
+                    flex-direction: column;
+                    flex: 0 0 auto;
+                }
+
+                .block {
+                    margin: 5px 0;
+                }
+            }
+        </style>
+    </head>
+        <body>
+            <main>
+            <container>
+                <div class="block block1">
+                    <h2>block1</h2>
+                    <p>Text</p>
+                </div>
+            </container>
+            <container>
+                <div class="block block2">
+                    <h2>block2</h2>
+                    <p>Text</p>
+                </div>
+                <div class="block block3">
+                    <h2>block3</h2>
+                    <p>Text</p>
+                </div>
+            </container>
+            <container>
+                <div class="block block4">
+                    <h2>block4</h2>
+                    <p>Text</p>
+                </div>
+                <div class="block block5">
+                    <h2>block5</h2>
+                    <p>Text</p>
+                </div>
+            </container>
+            </main>
+        </body>
+</html>
